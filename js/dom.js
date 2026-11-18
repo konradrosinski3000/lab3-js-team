@@ -7,3 +7,12 @@ console.log('Formularze:', liczbaFormularzy);
 console.log('Obrazki:', liczbaObrazkow);
 console.log('Odnośniki:', liczbaLinkow);
 console.log('Akapity w #projekt1:', akapityProjekt1);
+
+const licznikEl = document.getElementById('licznik');
+licznikEl.innerHTML = `
+    <strong>Podsumowanie elementów strony:</strong><br>
+    Formularze na całej stronie: ${liczbaFormularzy}<br>
+    Obrazki na całej stronie: ${liczbaObrazkow}<br>
+    Odnośniki na całej stronie: ${liczbaLinkow}<br>
+    Akapity &lt;p&gt; w sekcji #projekt1: ${akapityProjekt1}
+`;
