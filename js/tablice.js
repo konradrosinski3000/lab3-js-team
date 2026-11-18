@@ -20,3 +20,15 @@ console.log('Długość po dodaniu przez length:', tablica.length);
 
 tablica.push('nowy8', 'nowy9', 'nowy10', 'nowy11');
 console.log('Długość po push:', tablica.length);
+
+var nowaDlugosc = tablica.unshift('nowy12', 'nowy13');
+console.log('Nowa długość po unshift:', nowaDlugosc);
+console.log('test');
+
+wypisz(`Tablica: ${tablica.join(', ')} (elementów: ${tablica.length})`);
+
+const szukanyElement = 'Matrix';
+const czyZawiera = tablica.includes(szukanyElement);
+const pozycja = tablica.indexOf(szukanyElement);
+
+wypisz(`Czy tablica zawiera "${szukanyElement}"? ${czyZawiera ? 'Tak' : 'Nie'}, indeks: ${pozycja}`);
