@@ -33,9 +33,6 @@ const pozycja = tablica.indexOf(szukanyElement);
 wypisz(`Czy tablica zawiera "${szukanyElement}"? ${czyZawiera ? 'Tak' : 'Nie'}, indeks: ${pozycja}`);
 
 
-
-
-
 const oceny = [
     { przedmiot: 'JavaScript', ocena: 5 },
     { przedmiot: 'Git', ocena: 4 },
@@ -47,3 +44,17 @@ wypisz(`Drugi przedmiot: ${oceny[1].przedmiot}: ${oceny[1].ocena}`);
 oceny.forEach(item => {
     wypisz(`Przedmiot: ${item.przedmiot}, ocena: ${item.ocena}`);
 });
+
+const nazwyPrzedmiotow = oceny.map(item => item.przedmiot);
+wypisz(`Wszystkie przedmioty: ${nazwyPrzedmiotow.join(', ')}`);
+
+const piatki = oceny.filter(item => item.ocena === 5);
+const nazwyPiatek = piatki.map(item => item.przedmiot).join(', ');
+wypisz(`Przedmioty z oceną 5 (${piatki.length}): ${nazwyPiatek}`);
+
+let suma = 0;
+oceny.forEach(item => {
+    suma += item.ocena;
+});
+const srednia = (suma / oceny.length).toFixed(2);
+wypisz(`Średnia ocen: ${srednia}`);
