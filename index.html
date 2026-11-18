@@ -134,8 +134,17 @@
 				<h1>Projekt 1</h1>
 
 				<div id="skrypty">
-				<h3>Zadanie 1 – ładowanie skryptów</h3>
-				<!-- Osoba A: kod zadania 1 -->
+
+                    <h3>Zadanie 1 — ładowanie skryptów</h3>
+
+                    <script src="js/imie.js" defer></script>
+
+                    <script src="js/powitanie.js" defer></script>
+                        <p>
+                            Skrypt, który nie ma atrybutów blokuje parsowanie i wykonuje się od razu.
+                            Async sprawia, że skrypt pobiera się w tle ale nie ma gwarancji kolejności.
+                            Document.write nie nadaje się do sktyptów z defer i async.
+                        </p>
 				</div>
 				<div id="tablice">
 				<h3>Zadania 2 i 3 – tablice</h3>
