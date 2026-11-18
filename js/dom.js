@@ -16,3 +16,16 @@ licznikEl.innerHTML = `
     Odnośniki na całej stronie: ${liczbaLinkow}<br>
     Akapity &lt;p&gt; w sekcji #projekt1: ${akapityProjekt1}
 `;
+
+const listaEl = document.getElementById('lista');
+const elementyListy = [
+    `Liczba formularzy: ${liczbaFormularzy}`,
+    `Liczba obrazków: ${liczbaObrazkow}`,
+    `Liczba odnośników: ${liczbaLinkow}`
+];
+
+for (const tekst of elementyListy) {
+    const li = document.createElement('li');
+    li.textContent = tekst;
+    listaEl.append(li);
+}
