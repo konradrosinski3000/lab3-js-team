@@ -10,7 +10,7 @@ function startQuiz() {
     for (const question of questions) {
         const answer = prompt(question.pytanie, '');
 
-        if (Number(answer) === question.odpowiedz) {
+        if (answer !== null && answer.trim() !== '' && Number(answer) === question.odpowiedz) {
             alert('Prawidłowa odpowiedź!');
             score++;
         } else {
