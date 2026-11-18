@@ -31,3 +31,19 @@ const czyZawiera = tablica.includes(szukanyElement);
 const pozycja = tablica.indexOf(szukanyElement);
 
 wypisz(`Czy tablica zawiera "${szukanyElement}"? ${czyZawiera ? 'Tak' : 'Nie'}, indeks: ${pozycja}`);
+
+
+
+
+
+const oceny = [
+    { przedmiot: 'JavaScript', ocena: 5 },
+    { przedmiot: 'Git', ocena: 4 },
+    { przedmiot: 'HTML', ocena: 5 },
+    { przedmiot: 'CSS', ocena: 3 }
+];
+wypisz(`Drugi przedmiot: ${oceny[1].przedmiot}: ${oceny[1].ocena}`);
+
+oceny.forEach(item => {
+    wypisz(`Przedmiot: ${item.przedmiot}, ocena: ${item.ocena}`);
+});
