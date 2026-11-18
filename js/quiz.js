@@ -17,6 +17,8 @@ function startQuiz() {
             alert(`Błąd. Prawidłowa odpowiedź to ${question.odpowiedz}`);
         }
     }
+
+    document.getElementById('wynik').textContent = `Wynik: ${score}/${questions.length}`;
 }
 
 document.getElementById('startQuiz').addEventListener('click', startQuiz);
