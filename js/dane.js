@@ -1,5 +1,5 @@
 const zespol = [
-    { nazwisko: 'Rosiński', imie: 'Konrad', grupa: '1', email: 'mailA@student.ans-elblag.pl', indeks: '11111' },
+    { nazwisko: 'Rosiński', imie: 'Konrad', grupa: '1', email: '21533@student.ans-elblag.pl', indeks: '21533' },
     { nazwisko: 'Markowski', imie: 'Dawid', grupa: '1', email: '21489@student.ans-elblag.pl', indeks: '21489' }
 ];
 
