@@ -4,21 +4,31 @@ const questions = [
     { pytanie: 'Ile księżyców ma Wenus?', odpowiedz: 0 }
 ];
 
-function startQuiz() {
-    let score = 0;
+let nrPytania = 0;
+let punkty = 0;
 
-    for (const question of questions) {
-        const answer = prompt(question.pytanie, '');
-
-        if (answer !== null && answer.trim() !== '' && Number(answer) === question.odpowiedz) {
-            alert('Prawidłowa odpowiedź!');
-            score++;
-        } else {
-            alert(`Błąd. Prawidłowa odpowiedź to ${question.odpowiedz}`);
-        }
-    }
-
-    document.getElementById('wynik').textContent = `Wynik: ${score}/${questions.length}`;
+function pokazPytanie() {
+    document.getElementById('pytanie').textContent = questions[nrPytania].pytanie;
 }
 
-document.getElementById('startQuiz').addEventListener('click', startQuiz);
+document.getElementById('quizForm').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const pole = document.getElementById('odpowiedz');
+    const wpisanaWartosc = pole.value.trim();
+
+    if (wpisanaWartosc !== '' && Number(wpisanaWartosc) === questions[nrPytania].odpowiedz) {
+        punkty++;
+    }
+
+    pole.value = '';
+    nrPytania++;
+
+    if (nrPytania < questions.length) {
+        pokazPytanie();
+    } else {
+        document.getElementById('quizForm').style.display = 'none';
+        document.getElementById('wynik').textContent = `Wynik: ${punkty}/${questions.length}`;
+    }
+});
+
+pokazPytanie();
